@@ -50,6 +50,7 @@ To run this project, you will need to add the following environment variables to
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `name`      | `string` | **Required**. Your API key |
+
 #### Create user
 
 ```http
@@ -107,6 +108,7 @@ To run this project, you will need to add the following environment variables to
 | `name` | `string` | **Required**. Your API key |
 | `price` | `number` | **Required**. Your API key |
 | `quantity` | `number` | **Required**. Your API key |
+| `category` | `string` | **Required**. Your API key |
 
 #### Get List Product
 
@@ -160,6 +162,86 @@ To run this project, you will need to add the following environment variables to
 | `name` | `string` | **Required**. Your API key |
 | `price` | `number` | **Required**. Your API key |
 | `quantity` | `number` | **Required**. Your API key |
+
+#### Create Order
+
+```http
+  POST /order/create/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `uuid` | **Required**. Your API key |
+| `product_id` | `number` | **Required**. Your API key |
+| `quantity` | `number` | **Required**. Your API key |
+| `table_id` | `number` | **Required**. Your API key |
+
+
+#### Get All Order
+
+```http
+  GET /order/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `uuid` | **Required**. Your API key |
+| `user_id` | `number` | **Required**. Your API key |
+| `product_id` | `number` | **Required**. Your API key |
+| `table_id` | `number` | **Required**. Your API key |
+| `price` | `number` | **Required**. Your API key |
+| `quantity` | `number` | **Required**. Your API key |
+
+#### Get All Printer Bar
+
+```http
+  GET /printer-bar/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `uuid` | **Required**. Your API key |
+| `name` | `string` | **Required**. Your API key |
+| `quantity` | `number` | **Required**. Your API key |
+| `table_no` | `number` | **Required**. Your API key |
+
+#### Get All Printer Dapur
+
+```http
+  GET /printer-dapur/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `uuid` | **Required**. Your API key |
+| `name` | `string` | **Required**. Your API key |
+| `quantity` | `number` | **Required**. Your API key |
+| `table_no` | `number` | **Required**. Your API key |
+
+#### Get All Printer Kasir
+
+```http
+  GET /printer-kasir/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `uuid` | **Required**. Your API key |
+| `name` | `string` | **Required**. Your API key |
+| `quantity` | `number` | **Required**. Your API key |
+| `table_no` | `number` | **Required**. Your API key |
+
+#### Get Bill
+
+```http
+  GET /order/bill
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `table_id` | `uuid` | **Required**. Your API key |
+
+
 
 
 
