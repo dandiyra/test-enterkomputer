@@ -515,6 +515,42 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get All Printer Kasir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YTljNzRiLWIwYTktNDJmNC1hNGZmLTgzM2FlMzc1Y2IxZSIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODczNzE3LCJleHAiOjE3MjM0Nzg1MTd9.IaGo8R2_qmX2JWTUWQFRHlYrFlksbDriLmatMm3rXDE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/printer-kasir/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"printer-kasir",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
