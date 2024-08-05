@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "ea8cc7d2-90ea-4515-ba3c-617693b8d809",
+		"name": "Produk and User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15508670",
+		"_collection_link": "https://www.postman.com/crimson-water-678474/workspace/backend-dandy-yudistira/collection/15508670-ea8cc7d2-90ea-4515-ba3c-617693b8d809?action=share&source=collection_link&creator=15508670"
+	},
+	"item": [
+		{
+			"name": "Create Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyOGE2YTEwLThiZTYtNGEwMy1iMzI2LTJjMWFhZTU3ODVkMSIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIxOTc3MDc0LCJleHAiOjE3MjI1ODE4NzR9.OBaMuIUBZfviBoqvhEY9cg50sB9ZnpkRFNYFEdCOpt0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test1\",\r\n    \"price\" : \"1500000\",\r\n    \"quantity\" : \"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/produk/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyOGE2YTEwLThiZTYtNGEwMy1iMzI2LTJjMWFhZTU3ODVkMSIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIxOTc3MDc0LCJleHAiOjE3MjI1ODE4NzR9.OBaMuIUBZfviBoqvhEY9cg50sB9ZnpkRFNYFEdCOpt0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Produk By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyOGE2YTEwLThiZTYtNGEwMy1iMzI2LTJjMWFhZTU3ODVkMSIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIxOTc3MDc0LCJleHAiOjE3MjI1ODE4NzR9.OBaMuIUBZfviBoqvhEY9cg50sB9ZnpkRFNYFEdCOpt0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/id/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						"id",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMyM2ZhODQ4LWZmNGMtNDdkZS1iZDczLWJkNWRlOTUzZWRlNCIsInBob25lbnVtYmVyIjoiMDIxOTUzNDQ5MDUiLCJ0b2tlblZlcnNpb24iOjAsImlhdCI6MTcyMTg5NDU2OSwiZXhwIjoxNzIyNDk5MzY5fQ.KH0llWgz2DW0fryrWf6w0tZyuxcXwgsLQEE8z5m6Ab4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"dandy\",\r\n    \"price\" : \"1000\",\r\n    \"quantity\" : \"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/produk/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMyM2ZhODQ4LWZmNGMtNDdkZS1iZDczLWJkNWRlOTUzZWRlNCIsInBob25lbnVtYmVyIjoiMDIxOTUzNDQ5MDUiLCJ0b2tlblZlcnNpb24iOjAsImlhdCI6MTcyMTg5NDU2OSwiZXhwIjoxNzIyNDk5MzY5fQ.KH0llWgz2DW0fryrWf6w0tZyuxcXwgsLQEE8z5m6Ab4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMyM2ZhODQ4LWZmNGMtNDdkZS1iZDczLWJkNWRlOTUzZWRlNCIsInBob25lbnVtYmVyIjoiMDIxOTUzNDQ5MDUiLCJ0b2tlblZlcnNpb24iOjAsImlhdCI6MTcyMTkwMTY3OCwiZXhwIjoxNzIyNTA2NDc4fQ.wpDdb90xnR1FctKsJHvWfCTIEbdUvtodnHMkqd8pjck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_id\" : \"1\",\r\n    \"quantity\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dandy@gmail.com\",\r\n    \"password\" : \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"dandyira\",\r\n    \"lastName\"  : \"iradandy\",\r\n    \"password\"  : \"admin123\",\r\n    \"email\" : \"dandy2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

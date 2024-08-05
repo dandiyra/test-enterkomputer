@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "ea8cc7d2-90ea-4515-ba3c-617693b8d809",
+		"name": "Produk and User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15508670",
+		"_collection_link": "https://crimson-water-678474.postman.co/workspace/Backend-Dandy-Yudistira~8984c132-0e20-487f-b376-fea34c913d4e/collection/15508670-ea8cc7d2-90ea-4515-ba3c-617693b8d809?action=share&source=collection_link&creator=15508670"
+	},
+	"item": [
+		{
+			"name": "List Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhYTI0OGMxLTlhMzUtNGVmZS04OGRiLWM2MGIwMWZkYjgwNCIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODU4NjEzLCJleHAiOjE3MjM0NjM0MTN9.v_REUvHISedzW4cPJdFLWcbGp_OzqE5mqC9EeA4igz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Produk By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGQ0OWFiLTc0NmYtNDkxYi04YTIxLTQwYWE1M2U5ZDFjNSIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyMTQ1OTI0LCJleHAiOjE3MjI3NTA3MjR9._k165WmfqTZDqiuUzZZRB8PGgWq6s57NudD2pAOgM3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/id/?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						"id",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhYTI0OGMxLTlhMzUtNGVmZS04OGRiLWM2MGIwMWZkYjgwNCIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODU4NjEzLCJleHAiOjE3MjM0NjM0MTN9.v_REUvHISedzW4cPJdFLWcbGp_OzqE5mqC9EeA4igz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"kacang\",\r\n    \"price\" : \"1000\",\r\n    \"quantity\" : \"20\",\r\n    \"category\" : \"snack\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/produk/?id=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhYTI0OGMxLTlhMzUtNGVmZS04OGRiLWM2MGIwMWZkYjgwNCIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODU4NjEzLCJleHAiOjE3MjM0NjM0MTN9.v_REUvHISedzW4cPJdFLWcbGp_OzqE5mqC9EeA4igz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/produk/?id=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dandy2@gmail.com\",\r\n    \"password\" : \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"dandyira\",\r\n    \"lastName\"  : \"iradandy\",\r\n    \"password\"  : \"admin123\",\r\n    \"email\" : \"dandy2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhYTI0OGMxLTlhMzUtNGVmZS04OGRiLWM2MGIwMWZkYjgwNCIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODU4NjEzLCJleHAiOjE3MjM0NjM0MTN9.v_REUvHISedzW4cPJdFLWcbGp_OzqE5mqC9EeA4igz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Nasi Goreng + Jeruk Dingin\",\r\n    \"price\" : \"23000\",\r\n    \"quantity\" : \"10\",\r\n    \"category\" : \"Promo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/produk/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"produk",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRhYTI0OGMxLTlhMzUtNGVmZS04OGRiLWM2MGIwMWZkYjgwNCIsInBob25lbnVtYmVyIjoiMCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzIyODU4NjEzLCJleHAiOjE3MjM0NjM0MTN9.v_REUvHISedzW4cPJdFLWcbGp_OzqE5mqC9EeA4igz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\" : \"1\",\r\n    \"quantity\" : \"2\",\r\n    \"table_id\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bill",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_id\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/bill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"bill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Printer Bar",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/printer-bar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"printer-bar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Printer Dapur",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/printer-dapur/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"printer-dapur",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
